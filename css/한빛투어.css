@@ -1,0 +1,31 @@
+html,body, header, nav, section, article, aside, footer, ul, dl, dt, dd, p, li, a, img, h1, h2,h3,h4,h5,h6,span {
+  margin: 0;
+  padding: 0;
+}
+
+ul,li,ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* 항상 이렇게 에맷 쓰기전에 저장하기 */
+header { padding-top: 10px;}
+header>div#gnb {overflow: hidden;}
+header>div#gnb>ul {float: right;}
+header>div#gnb>ul>li { float: left;}
+header>div#gnb>ul>li>a {
+  color: #424242; 
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+}
+/* 글씨색변경은 a태그에 직접 하기. li에 안먹힘 */
+/* 글씨에 패딩을 주는이유는 반응하기위한 범위를 넓히기위해서 */
+header>h1{ text-align: center;}
+header>h1>a{}
+header>h1>a>img{}
+
+
+
