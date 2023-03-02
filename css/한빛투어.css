@@ -15,6 +15,31 @@ a {
 }
 /* 항상 이렇게 에맷 쓰기전에 저장하기 */
 
+div#quick{
+  position: absolute;
+  right: 10px;
+  top: 500px;
+}
+div#quick>ul{}
+div#quick>ul>li{
+  border: 1px solid #aeaeae;
+  width: 7vw;
+  height: 7vw;
+  background-color: white;
+  text-align: center;
+  border-radius: 50%;
+  margin: 10px 0;
+  
+}
+div#quick>ul>li>a{}
+div#quick>ul>li>a>img{
+  margin-top: 17px;
+}
+div#quick>ul>li>a>span{
+  display: block;
+  font-size: 12px;
+  color: #aaaaaa;
+}
 /* header_start */
 header { padding-top: 10px;}
 header>div#gnb {overflow: hidden;}
@@ -43,21 +68,49 @@ header>nav>ul>li{
   float: left;
   width: 20%;
   text-align: center;
-  position: relative;}
+  position: relative;
+}
 header>nav>ul>li>a{color:#5d5d5d;
   font-size: 20px;
   font-weight: bold;
   padding:0 10px;
-  transition: all 1s;}
-header>nav>ul>li:hover>a {color: red;}
+  transition: all 1s;
+}
+header>nav>ul>li:hover>a {
+  color: red;}
 
 /* sub_Navi */
 header>nav>ul>li>ul{
   position: absolute;
   width: 100%;
+  background-color: rgb(22, 28, 56);
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
 }
-header>nav>ul>li>ul>li{}
-header>nav>ul>li>ul>li>a{}
+/* header>nav>ul>li:hover>ul {
+  height: 100px;
+} */
+header>nav>ul>li:first-child:hover>ul{
+  height: 120px;
+}
+header>nav>ul>li:nth-child(2):hover>ul{
+  height: 90px;
+}
+header>nav>ul>li>ul>li{
+  transition: all 1s;
+  padding: 5px 0;
+}
+header>nav>ul>li>ul>li>:hover {
+  background-color: aqua;
+}
+header>nav>ul>li>ul>li>a{
+  color: rgb(194, 211, 45);
+  transition: all 1s;
+}
+header>nav>ul>li>ul>li>a:hover {
+  color: firebrick;
+}
 
 /* header_end */
 /*
@@ -76,7 +129,9 @@ header>nav>ul>li>ul>li>a{}
     */
 
 /* section_start */
-section{}
+section{
+  clear:both
+}
 section>ul{}
 section>ul>li{}
 section>ul>li>img{width: 100%;}
