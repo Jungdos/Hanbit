@@ -10,22 +10,175 @@ ul,li,ol {
 a {
   text-decoration: none;
 }
+#wrap85{
+  width: 85%; margin: auto;
+}
 /* 항상 이렇게 에맷 쓰기전에 저장하기 */
+
+/* header_start */
 header { padding-top: 10px;}
 header>div#gnb {overflow: hidden;}
 header>div#gnb>ul {float: right;}
-header>div#gnb>ul>li { float: left;}
+header>div#gnb>ul>li { 
+  float: left;}
 header>div#gnb>ul>li>a {
   color: #424242; 
   font-size: 12px;
   font-weight: bold;
   padding: 10px;
+  transition: all 1s;
 }
+header>div#gnb>ul>li:hover>a { color: rgb(253, 235, 130);
+}
+
 /* 글씨색변경은 a태그에 직접 하기. li에 안먹힘 */
 /* 글씨에 패딩을 주는이유는 반응하기위한 범위를 넓히기위해서 */
 header>h1{ text-align: center;}
 header>h1>a{}
 header>h1>a>img{}
+header{}
+header>nav{ border-top: 1px solid #aaaaaa;}
+header>nav>ul{}
+header>nav>ul>li{
+  float: left;
+  width: 20%;
+  text-align: center;
+  position: relative;}
+header>nav>ul>li>a{color:#5d5d5d;
+  font-size: 20px;
+  font-weight: bold;
+  padding:0 10px;
+  transition: all 1s;}
+header>nav>ul>li:hover>a {color: red;}
+
+/* sub_Navi */
+header>nav>ul>li>ul{
+  position: absolute;
+  width: 100%;
+}
+header>nav>ul>li>ul>li{}
+header>nav>ul>li>ul>li>a{}
+
+/* header_end */
+/*
+절대좌표 : 좌표를 body 기준으로 작업을 할 수 있다.
+          절대좌표 위에 부모요소(조상)가 상대좌표로 인식을 시켜주면
+          그 위치에서만 움직인다.
+          가로 사이즈가 사라지는 특성이있다.
+
+          ovh을 사용할 경우에는 abs좌표가 생성될떄 재단으로
+          삭제처럼 보인다.
+
+          clear:both는 절대 좌표 값의 영역은 보여지되, 
+          다음 영역을 정리 해줄떄 사용
+          클릭이라는 a태그가 덮을 경우 문제가 생겨 정리해준다.
+상대좌표 : 
+    */
+
+/* section_start */
+section{}
+section>ul{}
+section>ul>li{}
+section>ul>li>img{width: 100%;}
+/* section_end */
 
 
 
+/* div#event_start */
+div#event, 
+div#hotel{
+  margin-bottom: 50px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+/* 마진값
+위,아래 값 주의사항
+div가 위아래 겹칠경우 마진 값은 위, 아래 값이 겹친다.
+큰 사이즈로 결과가 나옴 */
+div#event>div#wrap85>div.title>h2,
+div#hotel>div#wrap85>div.title>h2{
+  display: inline-block;
+  border-bottom: 3px solid blue;
+  margin: 0 10px 20px 0;
+}
+div#event>div#wrap85>div.title>h2+span,
+div#hotel>div#wrap85>div.title>h2+span{
+  color: #cacaca; font-size: 13px;
+}
+div#event>div#wrap85>div.title>div#eventImg{}
+div#event>div#wrap85>div.title>div#eventImg>ul{}
+div#event>div#wrap85>div#eventImg>ul>li,
+div#hotel>div#wrap85>div#hotelImg>ul>li{
+  float: left;
+  width: 21vw;
+  height: 21vw;
+}
+div#event>div#wrap85>div#eventImg>ul>li>a{}
+div#event>div#wrap85>div#eventImg>ul>li>a>img,
+div#hotel>div#wrap85>div#hotelImg>ul>li>a>img{
+  width: 100%;
+  height: 100%;
+}
+/* div#event_end */
+
+/* div#hotel_start */
+div#hotel>div#wrap85>div#hotelImg{}
+div#hotel>div#wrap85>div#hotelImg>ul{}
+div#hotel>div#wrap85>div#hotelImg>ul>li>a{}
+/* div#hotel_end */
+
+/* article_start */
+article{
+  overflow: hidden;
+}
+article>#wrap85{}
+article>#wrap85>dl{
+  float: left;
+  width: 25%;
+}
+article>#wrap85>dl>dt{}
+article>#wrap85>dl>dt>span{
+  border-bottom: 3px solid rgb(206, 206, 255);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+article>#wrap85>dl>dd{
+  margin: 10px 0;
+}
+/* article_end */
+
+/* footer_start */
+footer{
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+footer>div#wrap85{
+  border-top: 2px solid #aeaeae;
+}
+footer>div#wrap85>div#footerNavi{
+  margin-top: 10px;
+}
+footer>div#wrap85>div#footerNavi>ul{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+footer>div#wrap85>div#footerNavi>ul>li{}
+footer>div#wrap85>div#footerNavi>ul>li>a{}
+footer>div#wrap85>h3{
+  float: left;
+  width: 15%;
+}
+footer>div#wrap85>p{
+  float: right;
+  width: 85%;
+}
+
+
+/* footer는 밀수있는게 없으니 마진이 아니라 패딩을 쓴다 */
+/* footer_end */
+/* 
+flex ==> 바꿀 당사자인 부모요소한테 작성한다.
+반응형 작업할떄 사용, 단위 계산을 할떄 소수점 단위로 계산이 불가능 한 것들을 사용 
+justify-content : 자식요소의 정렬 방식
+*/
